@@ -13,6 +13,7 @@ public class massive_rnd {
             System.out.print(" " + numbers[i] + " ");
 
         }
+        System.out.println();
         int max = numbers[1];
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] > max) {
