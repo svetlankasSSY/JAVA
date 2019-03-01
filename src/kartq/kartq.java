@@ -12,6 +12,7 @@ public class kartq {
         String[] masti = {"Пики", "Буби", "Черви", "Крести"}; //suits
         String[] zna4enie = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Валет", "Дама", "Король", "Туз"}; //rank
         int n = masti.length * zna4enie.length; //количество карт
+        
         // 2 - ввод с консоли
 
         for (;;) {
@@ -36,6 +37,7 @@ public class kartq {
             }
         }
         // 3 - inicializacija kolodq
+        
         String[] koloda = new String[n]; // deck
         for (int i = 0; i < zna4enie.length; i++){
             for(int j = 0; j < masti.length; j++){
@@ -43,13 +45,16 @@ public class kartq {
             }
         }
         //4-peretasovka kolodq
+        
         for (int i = 0; i < n; i++){
             int r = i + (int) (Math.random() * (n - i)); //slu4ajnaja karta
             String temp = koloda[r];
             koloda[r] = koloda[i];
             koloda[i] = temp;
         }
+        
         //5 - razda4a kolodq
+        
         for(int i = 0; i < players * cardsPerPlayer; i++){
             System.out.println(koloda[i]);
             if(i % cardsPerPlayer == cardsPerPlayer - 1){
